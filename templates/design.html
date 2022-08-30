@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% block navbar%}
+<link rel = "stylesheet" href = "{{ url_for('static',filename='design.css') }}">
+<link rel = "stylesheet" href = "{{ url_for('static',filename='loading.css') }}">
+
+<body>
+     
+    <div class="text_containter" id="content">
+    <h1>Got a design idea? </h1>
+    <h2>Please enter your idea in the text box below</h2>
+    </div>
+    <div class= "form_container">
+
+        <form name="submitForm" action="{{url_for('design')}}" method="post">
+            <label for="search_term">Search Term: </label>
+            <input type="text" name = "search_term" required>
+            <br>
+            <input type = "submit" value="Submit" onclick="loading();">
+        </form>
+    </div>
+ 
+    <div class="help_container">
+        <img class = "help" src="../static/help.jpg" alt="help">
+        <div class="help_hide">
+            <h1>Can't start searching?</h1>
+            <h2> -Please input your idea first.</h2>
+        </div>
+    </div>
+
+    <div class="loading" id="loading"></div>
+
+</body>
+
+<script type="text/javascript">
+    function loading(){
+        let value = document.forms["submitForm"]["search_term"].value;
+        if (value != ""){
+            $("#loading").show();
+        }
+        
+    }
+</script>
+
+{% endblock %}

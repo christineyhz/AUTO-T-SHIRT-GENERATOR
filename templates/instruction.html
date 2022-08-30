@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block navbar%}
+<link rel = "stylesheet" href = "{{ url_for('static',filename='instruction.css') }}">
+
+<body>
+
+    <div class="ins_welcome">
+        <h1>Welcome to the Auto T-Shirt Design Generator!</h1>
+        <h1>The generator creates and analyses T-Shirt designs and comes with two ways to generate T-Shirt Designs.</h1>
+    </div>
+
+  <div class="container">
+    <div class="item">
+        <h2>Design with an idea: </h2>
+        <ol>
+            <li>Just type in any idea you have in your mind about the content of the T-Shirt design you want the generator gets to you. For example, you can try and type in cat.</li>
+            
+            <li>Then the generator will first start to look at what is trend is in the current market, and then popular images for you to use will be popped up on the next page.</li>
+            
+            <li>Now it is time to try out different images with different T-Shirt colours. Please notice that there is a recommended T-Shirt colour being displayed in the image editor. What is more, you can also type in some slogan which will make your design more unique.</li>
+            
+            <li>When you are satisfied with your design, you can download it by clicking the download button. And if you want to start analysing this design, please click the save design button first, and then you will see the analyse button. Please wait a few seconds (normally 3 seconds will be enough for everything to be settled down) before clicking the analyse button.</li>
+            
+            <li>Lastly, the analysis of your design will be shown, which includes the similar T-Shirt products the generator found on the internet and the predicted sales figure the generator calculated.</li>
+        </ol> 
+    </div>
+    <div class="item">
+        <h2>Design with an image: </h2>
+        <ol>
+            <li>Please upload your image and provides a short description of this image. Please notice that the generator only takes in JPGs and PNGs. And the maximum character is 100 for the description. </li>
+            <li>Now it is time to try out different T-Shirt colours. Please notice that there is a recommended T-Shirt colour being displayed in the image editor. What is more, you can also type in some slogan which will make your design more unique.</li>
+            <li>When you are satisfied with your design, you can download it by clicking the download button. And if you want to start analysing this design, please click the save design button first, and then you will see the analyse button. Please wait a few seconds (normally 3 seconds will be enough for everything to be settled down) before clicking the analyse button.</li>
+            <li>Lastly, the analysis of your design will be shown, which includes the similar T-Shirt products the generator found on the internet and the predicted sales figure the generator calculated.</li>
+        </ol>
+    </div>
+  </div>
+
+  <div class="note_container">
+    <h3>&#42; Please note: If the save design or take image button does not work properly or if the colour information does not show properly, please disable web security for your browser.</h3>
+  </div>
+
+
+  {% endblock %}

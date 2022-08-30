@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block navbar%}
+<body class="home-background"></body>
+<h1 class="home_h1_1">Welcome to the</h1>
+<h1 class="home_h1_2"> Auto T-Shirt Design Generator!</h1>
+<h2 class="home_h2">Please select: </h2>
+
+<div class="home_button">
+<a href="{{ url_for('design') }}">
+    <button class="home_flex_button" >Start design with an idea</button>
+</a>
+<a href="{{ url_for('upload_image') }}">
+    <button class="home_flex_button" >Start design with an image</button>
+</a>
+<a href="{{ url_for('instruction') }}">
+    <button class="home_flex_button" >Read Instruction</button>
+</a>
+</div>
+{% endblock %}

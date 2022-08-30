@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block navbar%}
+<link rel = "stylesheet" href = "{{ url_for('static',filename='uploadForm.css') }}">
+
+<div class="help_container">
+    <img class = "help" src="../static/help.jpg" alt="help">
+    <div class="help_hide">
+        <h1>Can't upload your image?</h1>
+        <h2> -Please make sure you only upload JPGs or PNGs and you have entered a discription about your image.</h2>
+    </div>
+</div>
+
+<div class="upload_form_container">
+    <h1>Let's design with an image</h1>
+
+    <form method="POST" enctype='multipart/form-data'>
+        {{form.hidden_tag()}}
+        {{form.file()}}
+        {{form.title.label}}
+        {{form.title()}}
+        {{form.submit()}}
+    </form>
+</div>
+
+
+{% endblock %}

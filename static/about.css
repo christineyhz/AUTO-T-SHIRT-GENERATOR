@@ -1,0 +1,15 @@
+body{
+    background: rgba(255, 255, 255, 0.35) url('bg_home.jpg') no-repeat;
+}
+
+.info{
+    width: 60%;
+    margin-top: 190px;
+    margin-left: 100px;
+    color: white;
+    font-size: xx-large;
+}
+
+.link{
+    color: gray;
+}

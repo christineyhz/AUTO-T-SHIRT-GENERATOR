@@ -1,0 +1,13 @@
+body{
+    background: rgba(255, 255, 255, 0.35) url('bg_home.jpg') no-repeat;
+}
+
+.container{
+    color: white;
+    margin-top: 20vh;
+    margin-left: 20vw;
+}
+
+body p{
+    font-size: xx-large;
+}

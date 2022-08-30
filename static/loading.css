@@ -1,0 +1,8 @@
+div#loading {
+    display: none;
+    background: url("carregando.gif") no-repeat;
+    cursor: wait;
+    height: 200px;
+    margin-top: 35vh;
+    margin-left: 38vw;
+}

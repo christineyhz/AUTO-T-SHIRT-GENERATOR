@@ -1,0 +1,431 @@
+{% extends 'base.html' %}
+
+{% block navbar%}
+<link rel = "stylesheet" href = "{{ url_for('static',filename='show.css') }}">
+
+<!-- JQuery and Javascript -->
+
+<!-- partial:index.partial.html -->
+<div id="app">
+ 
+  <div id="capture" style="width: 700px;height: 640px">
+    <div class="tshirt">
+      <div class="tshirt_bg">
+        <svg id="js-tshirt" class="tshirt__overlay" xmlns="http://www.w3.org/2000/svg"
+             xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="none" width="700" height="640">
+          <defs>
+            <path d="M 384.27,5.78
+          C 380.38,8.47 372.11,12.86 365.83,15.55
+            354.96,20.24 354.06,20.44 343.69,20.73
+            324.75,21.33 313.88,18.34 301.12,8.87
+            292.94,2.89 290.65,2.09 286.86,4.19
+            285.66,4.78 280.58,5.48 275.49,5.68
+            269.21,5.78 264.62,6.58 260.53,8.07
+            251.06,11.56 239.60,14.65 226.83,16.95
+            220.25,18.14 209.98,20.73 204.10,22.53
+            198.12,24.42 192.63,25.92 191.94,25.92
+            191.24,25.92 184.86,27.71 177.88,29.81
+            170.80,32.00 161.92,34.69 158.04,35.79
+            151.06,37.88 148.07,39.48 131.81,49.94
+            123.44,55.32 119.05,58.12 91.23,75.66
+            84.15,80.15 75.18,86.23 71.29,89.22
+            67.50,92.21 52.84,103.27 38.89,113.84
+            7.58,137.46 0.10,143.55 0.00,145.64
+            0.00,147.23 7.38,158.20 17.15,170.96
+            29.31,187.11 42.28,207.74 53.84,229.47
+            56.63,234.76 59.82,240.24 60.82,241.54
+            62.72,243.93 62.82,243.93 70.39,242.63
+            83.75,240.34 95.82,236.25 110.38,229.27
+            130.32,219.70 131.71,220.30 125.93,236.55
+            125.23,238.55 124.63,242.13 124.63,244.53
+            124.53,246.82 123.94,253.00 123.14,258.18
+            120.85,274.33 121.64,349.39 124.63,383.79
+            126.73,408.01 126.83,412.30 125.73,421.67
+            121.94,454.76 121.74,458.95 121.74,500.02
+            121.74,522.95 122.14,548.26 122.64,556.24
+            123.24,564.21 124.04,581.16 124.63,593.92
+            125.13,606.58 125.83,617.55 126.13,618.04
+            126.53,618.64 129.42,618.84 133.41,618.44
+            142.28,617.75 207.99,621.03 244.28,624.03
+            251.16,624.52 272.20,625.22 291.14,625.52
+            310.09,625.82 333.12,626.52 342.49,627.22
+            351.77,627.81 389.06,628.41 425.25,628.61
+            461.44,628.71 493.05,629.11 495.54,629.31
+            510.90,630.80 544.10,631.20 553.77,630.01
+            553.77,630.01 564.24,628.71 564.24,628.71
+            564.24,628.71 564.84,624.82 564.84,624.82
+            565.24,622.73 565.04,614.36 564.44,606.28
+            561.35,565.71 559.06,523.64 559.76,522.45
+            560.75,520.95 560.65,444.09 559.56,390.26
+            559.06,364.45 558.66,341.62 558.66,339.43
+            558.66,331.05 555.77,286.19 554.27,269.15
+            553.67,262.27 552.58,253.20 551.78,248.81
+            551.78,248.81 550.48,241.04 550.48,241.04
+            550.48,241.04 553.37,237.35 553.37,237.35
+            554.97,235.36 556.57,232.26 557.06,230.37
+            558.06,226.28 561.55,223.49 566.34,222.70
+            569.53,222.20 570.62,222.79 579.20,229.77
+            589.37,237.95 596.45,242.03 605.42,244.63
+            616.69,247.82 616.09,248.31 624.67,230.77
+            628.75,222.30 632.14,215.12 632.14,214.92
+            632.14,214.52 634.84,210.23 646.40,191.89
+            650.09,186.11 653.08,181.13 653.08,180.93
+            653.08,180.13 668.24,158.20 674.22,150.32
+            677.41,146.14 680.00,142.45 680.00,142.25
+            680.00,141.95 675.42,138.76 669.83,135.07
+            664.15,131.28 654.68,124.61 648.60,120.12
+            619.68,98.69 609.81,91.61 599.24,84.83
+            580.50,72.77 574.31,68.58 565.84,62.40
+            543.01,45.46 523.56,35.79 501.53,30.50
+            497.94,29.61 491.26,27.81 486.57,26.42
+            481.88,25.02 468.03,21.63 455.66,18.84
+            415.98,10.07 399.23,5.48 395.14,2.49
+            392.45,0.40 392.05,0.60 384.27,5.78 Z" id="a"/>
+          </defs>
+          <use xlink:href="#a"/>
+        </svg>
+        <div class = "urpperwrapper">
+          <h1 :style="{fontSize: changeSize, color:changeUpperColour}" class = "upper-text">[[upper_text]]</h1>
+        </div>
+        
+        <img crossorigin="anonymous" class="tshirt__img" src="https://res.cloudinary.com/dkkgmzpqd/image/upload/v1545217305/T-shirt%20Images/white.png?_=ddd" alt="">
+
+        <div class = "lowerwrapper">
+          <h1 :style="{fontSize: changeLowerSize, color:changeLowerColour}">[[lower_text]]</h1>
+        </div>
+      </div>
+      <div class = "big-screen">
+
+        <img id = "image-shown" class="tshirt__img_filler" src = {{img_src}} alt={{img_alt}}>
+        
+      </div>
+    </div>
+  </div>
+
+  
+
+  <div class="info_container">
+    <h1 class="container_name">Design Information: </h1>
+    <h3>The name of the image is <span id="alt-span"> </span></h3>
+    <h3>The dominant colour of this image is: <span id="dominant-color-span"> </span></h3>
+    <div ref="colors" class="colors"> </div>
+    <h3>The complementary color of the image is <span id="color-span"> </span></h3>
+
+  </div>
+
+  <div class = 'design_adjusters_container'>
+    <h1 class="container_name">Image Editor: </h1>
+    <h1>Enter some upper text here: </h1>
+    <input class = 'textbox' type = 'text' v-model = "upper_text">
+    <input class = 'slider' type = 'range' min="25" max = "65" v-model = "upper_text_slider">
+    <span>[[upper_text_slider]]px</span>
+    <input type="color" id="upper_color" v-model = "up_color">&#x2190 Change Upper Text Colour</input>
+    
+    <h1>Enter some lower text here: </h1>
+    <input class = 'textbox' type = 'text' v-model = "lower_text">
+    <input class = 'slider' type = 'range' min="25" max = "45" v-model = "lower_text_slider">
+    <span>[[lower_text_slider]]px</span>
+    <input type="color" id="lower_color" v-model = "lo_color">&#x2190 Change Lower Text Colour</input>
+    <br>
+    <button class = 'button' onclick="saveDesign()">Save Design</button>
+    <button class = 'button' id="take_image">Take Image</button>
+    <a id="analysis_link" href=" " onclick="loading();"></a>
+    
+    <div class="colours">
+      <div class="colours__inputs">
+        <h1>Change the T-Shirt Colour here:</h1>
+        <input id="js-color-1" class="jscolor {onFineChange:'updateTshirt(this)'}" value="#32a852">
+      </div>
+    </div>
+  </div>
+
+  <div class="help_container">
+    <img class = "help" src="../static/help.jpg" alt="help">
+    <div class="help_hide">
+      <h1>Can't analyse the design?</h1>
+      <h2> -Please save your idea first and wait a just few seconds.</h2>
+      <br>
+      <h1>Save design or take image button does not work properly?</h1>
+      <h2> -Please try disabling web security for your browser.</h2>
+      <br>
+        <h1>Colour information does not show properly?</h1>
+        <h2> -Please try disabling web security for your browser.</h2>
+    </div>
+  </div>
+
+  <div class="loading" id="loading"></div>
+
+
+</div>
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jscolor/2.0.4/jscolor.js'></script>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.7.8"></script>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://cdn.jsdelivr.net/npm/dom-to-image@2.6.0/src/dom-to-image.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.min.js"></script>
+
+
+<script
+  src="http://code.jquery.com/jquery-3.1.1.js"
+  integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="
+  crossorigin="anonymous"></script>  <!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://code.jquery.com/jquery-latest.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/color-thief/2.3.0/color-thief.umd.js"></script>
+
+<script>
+  function saveDesign(){
+    document.getElementById("analysis_link").href = "";
+    document.getElementById("analysis_link").innerHTML = "";
+
+    var imge = document.getElementById('image-shown');
+
+    name = imge.getAttribute('alt');
+
+    var node = document.getElementById('capture');
+      domtoimage.toPng(node)
+          .then(function (dataUrl) {
+              img = new Image();
+              img.src = dataUrl;
+              window.base64 = img.src;
+
+              /////
+              let data = {
+                'name': name,
+                'base': img.src,
+              }
+              var xml = new XMLHttpRequest();
+              xml.open("POST","/design-with-an-image-hide",true); 
+              xml.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+              dataSend= JSON.stringify({
+                'name': name,
+                'base': img.src,
+              });
+              xml.send(dataSend);
+              console.log('JSON.base')
+          })
+          .catch(function (error) {
+              console.error('oops, something went wrong!', error);
+          })
+
+    var link
+    var txt
+    if (confirm("Save Design? This will take about 3 seconds.")) {
+      link = "{{ url_for('analysis_image') }}";
+      txt = "Analyse This Design";
+    } else {
+      txt = "";
+      link = "";
+    }
+  
+    // the analysis link will only be shown after 3 seconds
+    setTimeout(() => { document.getElementById("analysis_link").href = link;
+                      document.getElementById("analysis_link").innerHTML = txt; }, 3000);
+  }
+</script>
+
+<script>
+  var app = new Vue({
+    el: "#app",
+    delimiters : ['[[', ']]'],
+    data: {
+      upper_text:"Upper Text",
+      lower_text:"Lower Text",
+      upper_text_slider: 50,
+      lower_text_slider: 35,
+      up_color: true,
+      lo_color: true,
+    },
+    computed:{
+      changeSize: function(){
+        return this.upper_text_slider + "px"
+      },
+      changeLowerSize: function(){
+        return this.lower_text_slider + "px"
+      },
+      changeUpperColour: function(){
+        this.up_color = document.getElementById("upper_color").value
+        return this.up_color
+      },
+      changeLowerColour: function(){
+        this.lo_color = document.getElementById("lower_color").value
+        return this.lo_color
+      }
+    },
+  })
+
+</script>
+
+<script>
+  // This is the function to convert the T-shirt design into a png image
+  $(document).ready(function(){
+    $("#take_image").click(function(){
+      domtoimage.toBlob(document.getElementById('capture')).then(function (blob) {
+        window.saveAs(blob, 'my-T-Shirt-design.png');
+      }); 
+
+      // getting the base64 string of the image
+      var node = document.getElementById('capture');
+      domtoimage.toPng(node)
+          .then(function (dataUrl) {
+              var img = new Image();
+              img.src = dataUrl;
+              console.log(img.src) //currently the base64 string of the image is been printing to the string
+          })
+          .catch(function (error) {
+              console.error('oops, something went wrong!', error);
+          });
+    });
+  })
+
+</script>
+
+<script>
+    const Tshirt = document.getElementById("js-tshirt");
+
+    function updateTshirt(picker, string) {
+        if (!string) {
+          Tshirt.style.fill = picker.toHEXString();
+        } else {
+            // Used when generating random
+            Tshirt.style.fill = string;
+            setTimeout(function () {
+              Tshirt.classList.remove("fade");
+            }, 700);
+        }
+    }
+
+    function componentToHex(c) {
+        var hex = c.toString(16);
+        return hex.length == 1 ? "0" + hex : hex;
+    }
+
+    function rgbToHex(r, g, b) {
+        return "#" + componentToHex(r) + componentToHex(g) + componentToHex(b);
+    }
+</script>
+
+<script type="text/javascript">
+
+  img = document.getElementById('image-shown');
+
+  alt = img.getAttribute('alt');
+
+  src = img.getAttribute('src')
+
+  document.getElementById("alt-span").textContent = alt;
+
+  function getColorFun(){
+      const colorThief = new ColorThief();
+      let dominant_color = colorThief.getColor(img);
+      console.log(dominant_color);
+      let hex_color = rgbToHex(dominant_color[0],dominant_color[1],dominant_color[2]);
+      console.log(hex_color);
+      let complimentary_color = hexToComplimentary(hex_color);
+      console.log(complimentary_color);
+      document.getElementById("dominant-color-span").textContent = hex_color;
+      document.getElementById("color-span").textContent = complimentary_color;
+      document.getElementById("js-color-1").value = complimentary_color; //changes the value in the colour picker
+  }
+  if (img.complete) {
+      getColorFun();
+  } else {
+      img.addEventListener('load', function () {
+          getColorFun(); 
+      });
+  };
+
+// This is the function which converts a rgb value to its corresponding hex value
+  function rgbToHex (r, g, b) {
+    return '#' + [r, g, b].map(function (x) {
+      var hex = x.toString(16);
+      return (hex.length === 1 ? '0' + hex : hex).toUpperCase();
+    }).join('');
+  };
+
+// https://stackoverflow.com/questions/1664140/js-function-to-calculate-complementary-colour
+  function hexToComplimentary(hex){
+
+      // Convert hex to rgb
+      var rgb = 'rgb(' + (hex = hex.replace('#', '')).match(new RegExp('(.{' + hex.length/3 + '})', 'g')).map(function(l) { return parseInt(hex.length%2 ? l+l : l, 16); }).join(',') + ')';
+
+      // Get array of RGB values
+      rgb = rgb.replace(/[^\d,]/g, '').split(',');
+
+      var r = rgb[0], g = rgb[1], b = rgb[2];
+
+      // Convert RGB to HSL
+      r /= 255.0;
+      g /= 255.0;
+      b /= 255.0;
+      var max = Math.max(r, g, b);
+      var min = Math.min(r, g, b);
+      var h, s, l = (max + min) / 2.0;
+
+      if(max == min) {
+          h = s = 0;  //achromatic
+      } else {
+          var d = max - min;
+          s = (l > 0.5 ? d / (2.0 - max - min) : d / (max + min));
+
+          if(max == r && g >= b) {
+              h = 1.0472 * (g - b) / d ;
+          } else if(max == r && g < b) {
+              h = 1.0472 * (g - b) / d + 6.2832;
+          } else if(max == g) {
+              h = 1.0472 * (b - r) / d + 2.0944;
+          } else if(max == b) {
+              h = 1.0472 * (r - g) / d + 4.1888;
+          }
+      }
+
+      h = h / 6.2832 * 360.0 + 0;
+
+      // Shift hue to opposite side of wheel and convert to [0-1] value
+      h+= 180;
+      if (h > 360) { h -= 360; }
+      h /= 360;
+
+      // Convert h s and l values into r g and b values
+      if(s === 0){
+          r = g = b = l; // achromatic
+      } else {
+          var hue2rgb = function hue2rgb(p, q, t){
+              if(t < 0) t += 1;
+              if(t > 1) t -= 1;
+              if(t < 1/6) return p + (q - p) * 6 * t;
+              if(t < 1/2) return q;
+              if(t < 2/3) return p + (q - p) * (2/3 - t) * 6;
+              return p;
+          };
+
+          var q = l < 0.5 ? l * (1 + s) : l + s - l * s;
+          var p = 2 * l - q;
+
+          r = hue2rgb(p, q, h + 1/3);
+          g = hue2rgb(p, q, h);
+          b = hue2rgb(p, q, h - 1/3);
+      }
+
+      r = Math.round(r * 255);
+      g = Math.round(g * 255); 
+      b = Math.round(b * 255);
+
+      // Convert r b and g values to hex
+      rgb = b | (g << 8) | (r << 16); 
+      return "#" + (0x1000000 | rgb).toString(16).substring(1);
+  }  
+
+</script>
+
+<script type="text/javascript">
+  function loading(){
+      $("#loading").show();
+  }
+</script>
+
+</body>
+{% endblock %}

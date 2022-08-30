@@ -1,0 +1,39 @@
+body{
+    background: rgba(255, 255, 255, 0.35) url('bg_home.jpg') no-repeat;
+    color:white;
+}
+
+ol{
+    margin-top: 0;
+    margin-bottom: 1rem;
+    padding-inline-start: 20px;
+}
+
+.ins_welcome{
+    width: 70%;
+    margin-top: 30px;
+    margin-left: 20px;
+    text-align: center;
+}
+
+.container {
+    margin-top: 20px;
+    margin-left: 0px;
+    display: flex;
+    padding-inline-start: 10px;
+}
+    
+.item {
+    flex-basis: 470px;
+    margin: 30px;
+}
+
+.note_container{
+    margin-left: 50px;
+    margin-top: -25px;
+    width:950px;
+}
+
+.note_container > h3{
+    font-size: large;
+}

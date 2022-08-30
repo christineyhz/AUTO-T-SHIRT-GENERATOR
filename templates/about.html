@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block navbar%}
+<link rel = "stylesheet" href = "{{ url_for('static',filename='about.css') }}">
+
+<div class="info">
+    <p>This application was created by Christine Yihua Zhou as her MSc Computing Science Individual Project.</p>
+
+    <p>This application generates and analyses T-Shirt Designs automatically.</p>
+
+    <p>The images used in this application come from <a class="link" href="https://unsplash.com/license" target="_blank">Unsplash</a> and <a class="link" href="https://support.freepik.com/s/article/Is-Freepik-for-free?language=en_US" target="_blank">freepik</a>. And please notice that although these images can be used for commercial purposes, please still check the most up-to-date copyright information before commercial productions. </p>
+</div>
+
+{% endblock %}

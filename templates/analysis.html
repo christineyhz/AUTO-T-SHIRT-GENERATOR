@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+
+{% block navbar%}
+
+<link rel = "stylesheet" href = "{{ url_for('static',filename='analysis.css') }}">
+
+<div class="help_container">
+    <img class = "help" src="../static/help.jpg" alt="help">
+    <div class="help_hide">
+        <h1>No Etsy or Ebay products showing?</h1>
+        <h2> -There might be a problem, please come back later.</h2>
+    </div>
+</div>
+
+<div class = "saved_design_container">
+        <h1>The name of the design: {{design_name}} </h1>
+
+        {% include 'base_saved_design.html' %} <!--  this the image tag which shows the saved design -->
+
+    </div>
+
+    <div class = "sale_info_container">
+        <h1>Based on the information on Etsy, the average sales of this design is <span>{{avg_sale}}</span>.</h1>
+        <h4> &#42; Please keep in mind that this sales figure calculated is just an estimation.</h2>
+    </div>
+
+    <div class = "similar_products">
+        <h1>Similar T-Shirt Products Found </h1>
+
+    <div class = "thumbnail_container">
+        <h2>on eBay: </h2>
+        <div class="slides">
+            {% for dict_item in products %}
+                <a href= {{dict_item.link}} target="_blank">
+                    <img src="{{dict_item.image}}" alt = "{{dict_item.title}}" height="150" width="150">
+                </a>  
+            {% endfor %}    
+        </div>
+
+        
+        <h2>on Etsy: </h2>
+        <div class="slides">
+            {% for dict_item in etsy %}
+                <a href= {{dict_item.link}} target="_blank">
+                    <img src="{{dict_item.image}}" alt = "{{dict_item.title}}" height="150" width="150">
+                </a>  
+            {% endfor %}   
+        </div> 
+    </div>
+    </div>
+
+  
+
+
+
+
+{% endblock %}

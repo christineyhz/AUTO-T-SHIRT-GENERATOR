@@ -1,0 +1,35 @@
+.text_containter{
+    margin-top: 80px;
+    margin-left: 150px;
+    color: #343a40;
+}
+
+.form_container{
+    height: 300px;
+    width:600px;
+    border: solid rgba(165, 91, 42, 0.486);
+    border-radius: 5px;
+    border-width: 3px;
+    font-size: 30px;
+    text-align: center;
+    margin-left: 480px;
+    margin-top: 50px;
+}
+
+label{
+    margin-top: 80px;
+    margin-left: -3px;
+    margin-bottom: 50px;
+}
+
+.help_container{
+    margin-top: -350px;
+}
+
+.help{
+    margin-top: -300px;
+}
+
+.help_hide {
+    margin-top: -130px;  
+}
