@@ -1,0 +1,2 @@
+This application involves the use of en_core_web_sm, which is an English language model developed by spaCy (detailed information can be found at https://spacy.io/models/en).
+And if the model does not work properly, please try to download the model manually to your environment by typing: python -m spacy download en_core_web_sm to your command line.
